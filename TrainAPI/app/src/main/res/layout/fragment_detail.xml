@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="dog" type="com.example.trainapi.model.Dog"></variable>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.DetailFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            tools:context=".view.DetailFragment">
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_arrow_back_ios_24">
+
+            </ImageButton>
+
+            <ImageView
+                android:id="@+id/image_detail"
+                android:layout_width="390dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/button_back"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/box"
+                android:backgroundTint="#D5D5D5"></ImageView>
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/image_detail"
+                android:layout_marginTop="15dp"
+                android:text="@{dog.name}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_breedfor_title"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_name"
+                android:layout_marginTop="15dp"
+                android:text="Breed for:"
+                android:textColor="#AEAEAE"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_breedgroup_title"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_breedfor_title"
+                android:layout_marginTop="15dp"
+                android:text="Breed group:"
+                android:textColor="#AEAEAE"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_Country"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_breedgroup_title"
+                android:layout_marginTop="15dp"
+                android:text="Country:"
+                android:textColor="#AEAEAE"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_lifespan"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_Country"
+                android:layout_marginTop="15dp"
+                android:text="Life span:"
+                android:textColor="#AEAEAE"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_temperament"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_lifespan"
+                android:layout_marginTop="15dp"
+                android:text="Temperament:"
+                android:textColor="#AEAEAE"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_breedfor_info"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="@{dog.bred_for}"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_breedgroup_info"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_breedfor_info"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="@{dog.breed_group}"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_country_info"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_breedgroup_info"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="@{dog.origin}"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_lifespan_info"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/text_country_info"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="@{dog.life_span}"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/text_temperament_info"
+                android:layout_width="240dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/text_lifespan"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="@{dog.temperament}"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
